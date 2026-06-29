@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const stack = document.querySelector(".stack");
 
   // Listar las etiquetas
-  fetch("http://localhost:8080/api/skills/tags")
+  fetch("/api/skills/tags")
     .then((response) => {
       if (!response.ok) throw new Error("Error al obtener los tags: " + response.status);
       return response.json();
